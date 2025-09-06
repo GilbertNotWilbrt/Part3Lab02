@@ -1,5 +1,5 @@
-Sorry I wasn't able to commit and push on my PC, I think I might've messed up the files.
-So here is my README directly inputted into GitHub
+*Sorry I wasn't able to commit and push on my PC, I think I might've messed up the files.
+So here is my README directly inputted into GitHub*
 
 Project: better-ticket-machine
 Authors: David Barnes and Michael Kölling
