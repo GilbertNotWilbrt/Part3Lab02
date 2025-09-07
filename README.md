@@ -135,3 +135,37 @@ public void printTicket(){
         System.out.print.ln("You must insert at least " + amountLeftToPay + " more cents.");
     }
 }
+
+#64
+
+public void printTicket() {
+    int currentPrice = price;
+
+    // Apply discount if selected
+    if (discountSelected) {
+        currentPrice = price / 2;
+        discountSelected = false; // reset after one ticket
+    }
+
+    int amountLeftToPay = currentPrice - balance;
+
+    if (amountLeftToPay <= 0) {
+        // Print the ticket
+        System.out.println("##################");
+        System.out.println("# The BlueJ Line");
+        System.out.println("# Ticket");
+        System.out.println("# " + currentPrice + " cents.");
+        System.out.println("##################");
+        System.out.println();
+
+        // Update totals
+        total = total + currentPrice;
+        balance = balance - currentPrice;
+    }
+    else {
+        System.out.println("You must insert at least: " + amountLeftToPay + " more cents.");
+    }
+}
+We would need the discountSelected field which keeps track if discount was selected.
+And we would need the selectDiscount() method which sets it to be true when discount is selected.
+Existing methods like insertMoney, refundBalance, getBalance do not need changes
